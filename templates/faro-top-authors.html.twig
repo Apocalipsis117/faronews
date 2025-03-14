@@ -1,0 +1,24 @@
+<section class="max-w-7xl mx-auto mb-10">
+    <div class="max-w-7xl mx-auto pt-10">
+        <div class="block">
+            <div class="block mb-5">
+                <title-section set-title="Top autores"></title-section>
+            </div>
+            <div class="block">
+                <ul class="grid grid-cols-12 gap-4 w-full">
+                    {% for item in data.authors %}
+                    <li class="col-span-3">
+                        <item-author
+                            image-src="{{ file_url('public://assets-fake/avatar-' ~ (item ?: 'default') ~ '.jpg') }}"
+                            name="Juan Perez"
+                            role="Periodista"
+                        >
+                        </item-author>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+

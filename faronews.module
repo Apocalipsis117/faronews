@@ -1,0 +1,73 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function faronews_theme()
+{
+    return [
+        'block_faro_menu_top' => [
+            'variables' => [
+                'data' => null,
+            ],
+            'template' => 'faro-menu-top'
+        ],
+        'block_faro_footer' => [
+            'variables' => [
+                'data' => null,
+            ],
+            'template' => 'faro-footer'
+        ],
+        'block_faro_message' => [
+            'variables' => [
+                'data' => null,
+            ],
+            'template' => 'faro-message'
+        ],
+        'block_faro_new_feactured' => [
+            'variables' => [
+                'data' => [
+                    'slider' => [],
+                    'new' => []
+                ],
+            ],
+            'template' => 'faro-new-feactured'
+        ],
+        'block_faro_latest_news' => [
+            'variables' => [
+                'data' => null,
+            ],
+            'template' => 'faro-latest-news'
+        ],
+        'block_faro_must_read' => [
+            'variables' => [
+                'data' => null,
+            ],
+            'template' => 'faro-must-read'
+        ],
+        'block_faro_top_authors' => [
+            'variables' => [
+                'data' => null,
+            ],
+            'template' => 'faro-top-authors'
+        ],
+        'block_faro_weekly_hightlint' => [
+            'variables' => [
+                'data' => null,
+            ],
+            'template' => 'faro-weekly-hightlint'
+        ],
+        'block_faro_new' => [
+            'variables' => [
+                'data' => null,
+            ],
+            'template' => 'faro-new'
+        ],
+        'block_faro_new_header' => [
+            'variables' => [
+                'data' => null,
+            ],
+            'template' => 'faro-new-header'
+        ]
+    ];
+}

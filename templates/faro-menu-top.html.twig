@@ -1,0 +1,64 @@
+<header class="sticky top-0 z-[15] bg-gray-900">
+    <div class="navtop mx-auto flex items-center p-3 flex-wrap text-white max-w-7xl">
+        <section class="w-auto">
+            <a href="#">
+                <img class="h-[45px]" src="..." alt="">
+            </a>
+        </section>
+        <nav class="flex-grow flex justify-center basis-0 navtop-nav">
+            <ul class="w-auto mx-auto flex gap-2 navtop-ul">
+                <li class="navtop-ul">
+                    <a class="navtop-a" href="#">
+                        <i class="mir mi-newspaper mr-2"></i>
+                        <p>Inicio</p>
+                    </a>
+                </li>
+                <li class="navtop-ul">
+                    <a class="navtop-a" href="#">
+                        <i class="mir mi-language mr-2"></i>
+                        <p>El mundo</p>
+                    </a>
+                </li>
+                <li class="navtop-ul">
+                    <a class="navtop-a" href="#">
+                        <i class="mir mi-contact_support mr-2"></i>
+                        <p>Opiniones</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <section class="w-auto">
+            <a href="#">Login</a>
+            <a href="#">Register</a>
+        </section>
+    </div>
+</header>
+<section class="block relative bg-gray-100 mb-3" id="nav">
+    <nav class="max-w-7xl mx-auto sub-navtop">
+        <ul>
+            <li>
+                <a href="#"><i class="mir mi-watch_later"></i> Ultima hora</a>
+            </li>
+            <li>
+                <a href="#">Deportes</a>
+            </li>
+            <li>
+                <a href="#">Politica</a>
+            </li>
+            <li>
+                <a href="#">Nacional</a>
+            </li>
+            <li>
+                <a href="#">Internacional</a>
+            </li>
+            <li>
+                <a v-bs-collapse="{ target: 'queso' }">Mas</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="collapse top-full bg-white left-0 w-full absolute" id="queso">
+        <section class="max-w-7xl mx-auto p-5">
+            lorem
+        </section>
+    </div>
+</section>

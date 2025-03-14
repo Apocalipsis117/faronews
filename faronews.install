@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function faronews_install()
+{
+    // Validar y crear vocabularios.
+    require_once __DIR__ . '/includes/vocabularies.php';
+    _faronews_create_vocabularies();
+
+    // Validar y crear tipos de contenido.
+    require_once __DIR__ . '/includes/content_types.php';
+    _faronews_create_content_types();
+
+    // Crear campos.
+    require_once __DIR__ . '/includes/news_fields.php';
+    _faronews_create_news_fields();
+
+    require_once __DIR__ . '/includes/journalist_fields.php';
+    _faronews_create_journalist_fields();
+
+    require_once __DIR__ . '/includes/category_fields.php';
+    _faronews_create_category_fields();
+
+    require_once __DIR__ . '/includes/tag_fields.php';
+    _faronews_create_tag_fields();
+
+    \Drupal::logger('faronews')->notice('Módulo FaroNews instalado correctamente.');
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function faronews_uninstall()
+{
+    // Eliminar vocabularios.
+    require_once __DIR__ . '/includes/vocabularies.php';
+    _faronews_delete_vocabularies();
+
+    // Eliminar tipos de contenido.
+    require_once __DIR__ . '/includes/content_types.php';
+    _faronews_delete_content_types();
+
+    // Eliminar campos.
+    require_once __DIR__ . '/includes/news_fields.php';
+    _faronews_delete_news_fields();
+
+    require_once __DIR__ . '/includes/journalist_fields.php';
+    _faronews_delete_journalist_fields();
+
+    require_once __DIR__ . '/includes/category_fields.php';
+    _faronews_delete_category_fields();
+
+    require_once __DIR__ . '/includes/tag_fields.php';
+    _faronews_delete_tag_fields();
+
+    \Drupal::logger('faronews')->notice('Módulo FaroNews desinstalado correctamente.');
+}

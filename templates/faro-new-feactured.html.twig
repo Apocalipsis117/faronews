@@ -1,0 +1,65 @@
+<section class="max-w-7xl mx-auto mb-10">
+    <div class="block">
+        <section class="grid grid-cols-12 gap-4 w-full">
+            <div class="col-span-8">
+                <article class="block relative h-full">
+                    <div class="w-[calc(100%-80px)] ml-[80px] h-full rounded-2xl overflow-hidden">
+                        <div class="swiper h-full" id="swiper-new-featured">
+                            <div class="swiper-wrapper h-full">
+                                {% for item in data.slider %}
+                                <div class="swiper-slide h-full"
+                                    data-title="Noticia #{{ item }}"
+                                    data-category="Noticia"
+                                    data-date="Agosto 03 - 2023"
+                                    data-description="orem ipsum dolor sit, amet, consectetur adipisicing elit. Velit, ea, esse voluptatum dolorem explicabo earum adipisci doloremque facilis."
+                                >
+                                    <img class="object-cover object-center w-full h-full" src="{{ file_url('public://assets-fake/new-' ~ (item ?: 'default') ~ '.jpg') }}" alt="">
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <blockquote id="new-blockquote" cite="#" class="absolute z-[1] bottom-[50%] translate-y-1/2 w-[75%] left-0 bg-[rgba(255,255,255,0.8)] rounded-2xl shadow-lg p-5">
+                        <div class="flex items-center flex-wrap gap-3 mb-4">
+                            <div class="w-auto text-2xl">
+                                <i class="mir mi-newspaper"></i>
+                            </div>
+                            <p class="flex-grow basis-0">
+                                <span id="category"></span>
+                            </p>
+                        </div>
+                        <h2 class="text-3xl font-semibold mb-3 text-green-800 uppercase" id="title"></h2>
+                        <p class="mb-4 text-lg" id="description"></p>
+                        <div class="swiper-btns block text-right">
+                            <button type="button" class="swiper-btn-prev">
+                                <i class="mir mi-arrow_back_ios"></i>
+                            </button>
+                            <button type="button" class="swiper-btn-next">
+                                <i class="mir mi-arrow_forward_ios"></i>
+                            </button>
+                        </div>
+                        <footer class="text-end text-gray-600">
+                            <time datetime="#" id="data"></time>
+                        </footer>
+                    </blockquote>
+                </article>
+            </div>
+            <div class="col-span-4">
+                <ul class="space-y-3">
+                    {% for item in data.news %}
+                        <li>
+                            <a href="#" class="flex gap-4 hover:bg-gray-100 active:bg-gray-200 rounded-md p-1">
+                                <img class="w-[140px] h-[140px] rounded-lg object-cover object-center" src="{{ file_url('public://assets-fake/new-' ~ (item ?: 'default') ~ '.jpg') }}" alt="">
+                                <div class="h-full flex flex-col *:w-full self-stretch">
+                                    <p class="flex items-center gap-1 text-green-700"><i class="mir mi-newspaper mr-2 text-lg"></i> <strong>Categoría</strong></p>
+                                    <h2 class="text-lg font-semibold">Noticia #{{ item }}</h2>
+                                    <time datetime="#" class="self-end text-sm">2018-06-05</time>
+                                </div>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </section>
+    </div>
+</section>

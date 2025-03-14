@@ -1,0 +1,27 @@
+<section class="max-w-7xl mx-auto mb-10">
+    <section class="block">
+        <div class="w-full mb-4">
+            <title-section set-title="Las mas destacadas de la semana"></title-section>
+        </div>
+        <div class="w-full mb-4">
+            <div class="swiper" id="swiper-weekly">
+                <div class="swiper-wrapper">
+                    {% for item in data['news'] %}
+                        <div class="swiper-slide">
+                            <card-new
+                                url="#"
+                                image-src="{{ file_url('public://assets-fake/new-' ~ (item ?: 'default') ~ '.jpg') }}"
+                                city="Ciudad"
+                                title="Lorem ipsum dolor, sit amet consectetur adipisicing."
+                                date="2024-08-22">
+                            </card-new>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+        </div>
+    </section>
+</section>

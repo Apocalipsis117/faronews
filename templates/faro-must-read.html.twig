@@ -1,0 +1,34 @@
+<section class="w-full py-10 bg-gray-100 mb-14">
+    <div class="max-w-7xl mx-auto">
+        <div class="block">
+            <title-section set-title="Mas Leidos"></title-section>
+        </div>
+        <section class="grid grid-cols-12 gap-4">
+            <div class="col-span-7">
+                <card-new
+                    ui="clean"
+                    image-src="{{ file_url('public://assets-fake/new-1.jpg') }}"
+                    city="Ciudad"
+                    title="Lorem ipsum dolor, sit amet consectetur adipisicing."
+                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis recusandae voluptates dicta consectetur! Molestias beatae veritatis placeat"
+                    date="2024-08-22">
+                </card-new>
+            </div>
+            <div class="col-span-5">
+                <ul class="space-y-3">
+                    {% for item in data['news'] %}
+                        <li>
+                            <item-new
+                                link="#"
+                                image-src="{{ file_url('public://assets-fake/new-' ~ (item ?: 'default') ~ '.jpg') }}"
+                                city="Ciudad"
+                                title="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+                                date="2024-08-22">
+                            </item-new>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </section>
+    </div>
+</section>

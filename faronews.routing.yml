@@ -1,0 +1,7 @@
+faronews.author:
+  path: '/faronews/author'
+  defaults:
+    _controller: '\Drupal\faronews\Controller\FaroNewsController::getAuthors'
+    _title: 'Test Author'
+  requirements:
+    _permission: 'access content'
