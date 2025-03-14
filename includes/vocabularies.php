@@ -7,9 +7,9 @@ use Drupal\taxonomy\Entity\Vocabulary;
  */
 function _faronews_create_vocabularies()
 {
-    _faronews_create_vocabulary('author', 'Autor', 'Autores de las noticias.');
-    _faronews_create_vocabulary('categories', 'Categorías', 'Categorías de las noticias.');
-    _faronews_create_vocabulary('tags', 'Etiquetas', 'Etiquetas para las noticias.');
+    _faronews_create_vocabulary('journalist', 'Periodista', 'Periodista de las noticias.');
+    _faronews_create_vocabulary('category', 'Categorías', 'Categorías de las noticias.');
+    _faronews_create_vocabulary('tag', 'Etiquetas', 'Etiquetas para las noticias.');
 }
 
 /**
@@ -17,9 +17,9 @@ function _faronews_create_vocabularies()
  */
 function _faronews_delete_vocabularies()
 {
-    _faronews_delete_vocabulary('author');
-    _faronews_delete_vocabulary('categories');
-    _faronews_delete_vocabulary('tags');
+    _faronews_delete_vocabulary('journalist');
+    _faronews_delete_vocabulary('category');
+    _faronews_delete_vocabulary('tag');
 }
 
 /**

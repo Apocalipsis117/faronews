@@ -11,11 +11,6 @@ function _faronews_create_tag_fields()
 {
     // Campos para el tipo de contenido 'tag'.
     $fields = [
-        // 'field_tag_name' => [
-        //     'type' => 'string',
-        //     'label' => 'Nombre de la Etiqueta',
-        //     'description' => 'Nombre de la etiqueta.',
-        // ],
         'field_tag_slug_url' => [
             'type' => 'string',
             'label' => 'URL Amigable de la Etiqueta',
@@ -72,7 +67,6 @@ function _faronews_create_tag_fields()
 function _faronews_delete_tag_fields()
 {
     $fields = [
-        // 'field_tag_name',
         'field_tag_slug_url',
     ];
 

@@ -11,11 +11,6 @@ function _faronews_create_category_fields()
 {
     // Campos para el tipo de contenido 'category'.
     $fields = [
-        // 'field_category_name' => [
-        //     'type' => 'string',
-        //     'label' => 'Nombre de la Categoría',
-        //     'description' => 'Nombre de la categoría.',
-        // ],
         'field_category_description' => [
             'type' => 'text',
             'label' => 'Descripción de la Categoría',
@@ -77,7 +72,6 @@ function _faronews_create_category_fields()
 function _faronews_delete_category_fields()
 {
     $fields = [
-        // 'field_category_name',
         'field_category_description',
         'field_category_slug_url',
     ];

@@ -11,20 +11,10 @@ function _faronews_create_news_fields()
 {
     // Campos para el tipo de contenido 'news'.
     $fields = [
-        // 'field_new_title' => [
-        //     'type' => 'string',
-        //     'label' => 'Título',
-        //     'description' => 'Título de la noticia.',
-        // ],
         'field_new_subtitle' => [
             'type' => 'string',
             'label' => 'Subtítulo',
             'description' => 'Subtítulo de la noticia.',
-        ],
-        'field_new_path_name' => [
-            'type' => 'string',
-            'label' => 'Nombre del Camino',
-            'description' => 'Nombre del camino de la noticia.',
         ],
         'field_new_is_slider' => [
             'type' => 'boolean',
@@ -56,26 +46,21 @@ function _faronews_create_news_fields()
             'label' => 'Imagen horizontal',
             'description' => 'Imagen horizontal de la noticia.',
         ],
-        'field_new_resume' => [
-            'type' => 'text',
-            'label' => 'Resumen',
-            'description' => 'Resumen de la noticia.',
-        ],
         'field_new_publication_date' => [
             'type' => 'datetime',
             'label' => 'Fecha de Publicación',
             'description' => 'Fecha de publicación de la noticia.',
         ],
-        'field_author_id' => [
+        'field_journalist_id' => [
             'type' => 'entity_reference',
-            'label' => 'Autor',
-            'description' => 'Autor de la noticia.',
+            'label' => 'Periodista',
+            'description' => 'Periodista de la noticia.',
             'settings' => [
                 'target_type' => 'taxonomy_term',
                 'handler' => 'default:taxonomy_term',
                 'handler_settings' => [
                     'target_bundles' => [
-                        'author' => 'author',
+                        'journalist' => 'journalist',
                     ],
                 ],
             ],
@@ -89,7 +74,7 @@ function _faronews_create_news_fields()
                 'handler' => 'default:taxonomy_term',
                 'handler_settings' => [
                     'target_bundles' => [
-                        'categories' => 'categories',
+                        'category' => 'category',
                     ],
                 ],
             ],
@@ -103,7 +88,7 @@ function _faronews_create_news_fields()
                 'handler' => 'default:taxonomy_term',
                 'handler_settings' => [
                     'target_bundles' => [
-                        'tags' => 'tags',
+                        'tag' => 'tag',
                     ],
                 ],
                 'cardinality' => FieldStorageConfig::CARDINALITY_UNLIMITED,
@@ -172,17 +157,15 @@ function _faronews_create_news_fields()
 function _faronews_delete_news_fields()
 {
     $fields = [
-        // 'field_new_title',
-        'field_new_path_name',
+        'field_new_subtitle',
         'field_new_is_slider',
         'field_new_is_featured',
         'field_new_content',
         'field_new_url_video',
         'field_new_image_vertical',
         'field_new_image_horizontal',
-        'field_new_resume',
         'field_new_publication_date',
-        'field_author_id',
+        'field_journalist_id',
         'field_category_id',
         'field_tag_id',
         'field_user',

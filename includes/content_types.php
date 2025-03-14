@@ -20,7 +20,7 @@ function _faronews_delete_content_types()
 {
     _faronews_delete_content_type('news');
     _faronews_delete_content_type('journalist');
-    _faronews_delete_content_type('category');
+    _faronews_delete_content_type('categories');
     _faronews_delete_content_type('tag');
 }
 
