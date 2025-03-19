@@ -1,0 +1,4 @@
+services:
+  faronews.node_helper:
+    class: Drupal\faronews\Service\NodeHelper
+    arguments: ['@path_alias.manager', '@entity_type.manager']
