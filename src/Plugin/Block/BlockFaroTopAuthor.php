@@ -29,8 +29,7 @@ class BlockFaroTopAuthor extends BlockBase implements ContainerFactoryPluginInte
         ];
         return [
             '#theme' => 'block_faro_top_authors',
-            '#data' => $data,
-            '#title' => $this->t('Autores destacados')
+            '#data' => $data
         ];
     }
 

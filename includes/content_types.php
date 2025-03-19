@@ -8,9 +8,6 @@ use Drupal\node\Entity\NodeType;
 function _faronews_create_content_types()
 {
     _faronews_create_content_type('news', 'Noticias', 'Tipo de contenido para noticias.');
-    _faronews_create_content_type('journalist', 'Periodista', 'Tipo de contenido para periodistas.');
-    _faronews_create_content_type('category', 'Categoría', 'Tipo de contenido para categorías.');
-    _faronews_create_content_type('tag', 'Etiqueta', 'Tipo de contenido para etiquetas.');
 }
 
 /**
@@ -19,9 +16,6 @@ function _faronews_create_content_types()
 function _faronews_delete_content_types()
 {
     _faronews_delete_content_type('news');
-    _faronews_delete_content_type('journalist');
-    _faronews_delete_content_type('categories');
-    _faronews_delete_content_type('tag');
 }
 
 /**

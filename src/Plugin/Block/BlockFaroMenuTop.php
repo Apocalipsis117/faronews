@@ -29,8 +29,7 @@ class BlockFaroMenuTop extends BlockBase implements ContainerFactoryPluginInterf
         ];
         return [
             '#theme' => 'block_faro_menu_top',
-            '#data' => $data,
-            '#title' => $this->t('Menu de navegacion principal')
+            '#data' => $data
         ];
     }
 

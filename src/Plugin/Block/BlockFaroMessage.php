@@ -29,8 +29,7 @@ class BlockFaroMessage extends BlockBase implements ContainerFactoryPluginInterf
         ];
         return [
             '#theme' => 'block_faro_message',
-            '#data' => $data,
-            '#title' => $this->t('Footer')
+            '#data' => $data
         ];
     }
 

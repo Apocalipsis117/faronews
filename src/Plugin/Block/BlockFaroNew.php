@@ -30,8 +30,7 @@ class BlockFaroNew extends BlockBase implements ContainerFactoryPluginInterface
         ];
         return [
             '#theme' => 'block_faro_new',
-            '#data' => $data,
-            '#title' => $this->t('Noticia contenido')
+            '#data' => $data
         ];
     }
 

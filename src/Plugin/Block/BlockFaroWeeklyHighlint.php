@@ -29,8 +29,7 @@ class BlockFaroWeeklyHighlint extends BlockBase implements ContainerFactoryPlugi
         ];
         return [
             '#theme' => 'block_faro_weekly_hightlint',
-            '#data' => $data,
-            '#title' => $this->t('Autores destacados')
+            '#data' => $data
         ];
     }
 

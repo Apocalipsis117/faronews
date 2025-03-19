@@ -29,8 +29,7 @@ class BlockFaroFooter extends BlockBase implements ContainerFactoryPluginInterfa
         ];
         return [
             '#theme' => 'block_faro_footer',
-            '#data' => $data,
-            '#title' => $this->t('Footer')
+            '#data' => $data
         ];
     }
 

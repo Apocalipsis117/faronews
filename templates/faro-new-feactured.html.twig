@@ -6,14 +6,14 @@
                     <div class="w-[calc(100%-80px)] ml-[80px] h-full rounded-2xl overflow-hidden">
                         <div class="swiper h-full" id="swiper-new-featured">
                             <div class="swiper-wrapper h-full">
-                                {% for item in data.slider %}
+                                {% for new in data.slider %}
                                 <div class="swiper-slide h-full"
-                                    data-title="Noticia #{{ item }}"
-                                    data-category="Noticia"
-                                    data-date="Agosto 03 - 2023"
-                                    data-description="orem ipsum dolor sit, amet, consectetur adipisicing elit. Velit, ea, esse voluptatum dolorem explicabo earum adipisci doloremque facilis."
+                                    data-title="{{ new.title['#markup'] }}"
+                                    data-category="{{ new.category['#markup'] }}"
+                                    data-date="{{ new.date['#markup'] }}"
+                                    data-description="{{ new.subtitle['#markup'] }}"
                                 >
-                                    <img class="object-cover object-center w-full h-full" src="{{ file_url('public://assets-fake/new-' ~ (item ?: 'default') ~ '.jpg') }}" alt="">
+                                    <img class="object-cover object-center w-full h-full" src="{{ new.img['#markup'] }}" alt="">
                                 </div>
                                 {% endfor %}
                             </div>
@@ -46,14 +46,14 @@
             </div>
             <div class="col-span-4">
                 <ul class="space-y-3">
-                    {% for item in data.news %}
+                    {% for new in data.news %}
                         <li>
                             <a href="#" class="flex gap-4 hover:bg-gray-100 active:bg-gray-200 rounded-md p-1">
-                                <img class="w-[140px] h-[140px] rounded-lg object-cover object-center" src="{{ file_url('public://assets-fake/new-' ~ (item ?: 'default') ~ '.jpg') }}" alt="">
+                                <img class="w-[140px] h-[140px] rounded-lg object-cover object-center" src="{{ new.img['#markup'] }}" alt="">
                                 <div class="h-full flex flex-col *:w-full self-stretch">
-                                    <p class="flex items-center gap-1 text-green-700"><i class="mir mi-newspaper mr-2 text-lg"></i> <strong>Categoría</strong></p>
-                                    <h2 class="text-lg font-semibold">Noticia #{{ item }}</h2>
-                                    <time datetime="#" class="self-end text-sm">2018-06-05</time>
+                                    <p class="flex items-center gap-1 text-green-700"><i class="mir mi-newspaper mr-2 text-lg"></i> <strong>{{ new.category['#markup'] }}</strong></p>
+                                    <h2 class="text-lg font-semibold">{{ new.title['#markup'] }}</h2>
+                                    <time datetime="#" class="self-end text-sm">{{ new.date['#markup'] }}</time>
                                 </div>
                             </a>
                         </li>

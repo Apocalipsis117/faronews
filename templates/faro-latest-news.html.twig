@@ -4,15 +4,15 @@
     </div>
     <div class="block">
         <ul class="grid grid-cols-12 gap-4">
-            {% for item in data %}
+            {% for news in data.news %}
             <li class="col-span-4 h-full">
                 <card-new
-                    image-src="{{ file_url('public://assets-fake/new-' ~ (item ?: 'default') ~ '.jpg') }}"
-                    city="Ciudad"
-                    url="#"
-                    title="Lorem ipsum dolor, sit amet consectetur adipisicing."
-                    description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis recusandae voluptates dicta consectetur! Molestias beatae veritatis placeat"
-                    date="2024-08-22">
+                    image-src="{{ news.img['#markup'] }}"
+                    category="{{ news.category['#markup'] }}"
+                    url="{{ news.url['#markup'] }}"
+                    title="{{ news.title['#markup'] }}"
+                    description="{{ news.subtitle['#markup'] }}"
+                    date="{{ news.date['#markup'] }}">
                 </card-new>
             </li>
             {% endfor %}

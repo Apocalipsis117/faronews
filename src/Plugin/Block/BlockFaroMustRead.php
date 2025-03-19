@@ -30,8 +30,7 @@ class BlockFaroMustRead extends BlockBase implements ContainerFactoryPluginInter
         ];
         return [
             '#theme' => 'block_faro_must_read',
-            '#data' => $data,
-            '#title' => $this->t('Noticias mas leidas')
+            '#data' => $data
         ];
     }
 

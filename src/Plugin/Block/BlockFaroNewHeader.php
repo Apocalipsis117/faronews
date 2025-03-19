@@ -30,8 +30,7 @@ class BlockFaroNewHeader extends BlockBase implements ContainerFactoryPluginInte
         ];
         return [
             '#theme' => 'block_faro_new_header',
-            '#data' => $data,
-            '#title' => $this->t('Noticia titulo y encabezado')
+            '#data' => $data
         ];
     }
 
